@@ -1,6 +1,5 @@
 import { User } from '../user.model';
 import * as AuthActions from './auth.actions';
-import { stat } from 'fs';
 
 export interface State {
     user: User;
