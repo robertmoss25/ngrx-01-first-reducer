@@ -25,3 +25,4 @@ How to Install NGRX
 Run the below commands on windows
 
 npm install --save @ngrx/store
+npm install --save @ngrx/effects
