@@ -57,6 +57,19 @@ export function shoppingListReducer(
             return igIndex !== action.payload
           })
         }
+      case ShoppingListActions.START_EDIT:
+        // the ... is called the spread, it creates a new object
+        return {
+          ...state,
+          editedIngredientIndex: action.payload,
+          editedIngredient: {...state.ingredients[action.payload]}
+        }
+      case ShoppingListActions.STOP_EDIT:  
+        return  {
+          ...state,
+          editedIngredientIndex: -1,
+          editedIngredient: null
+        }
     default:
       return state;
   }
